@@ -1,0 +1,10 @@
+{
+  "name": "tiktok-dl-functions",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "btch-downloader": "^6.0.32"
+  }
+}

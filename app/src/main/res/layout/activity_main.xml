@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#171720"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="CLICK DOWNLOAD" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="20sp"/>
+            <TextView android:id="@+id/language" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HT" android:textColor="#FFFFFF" android:textStyle="bold" android:padding="8dp"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📥 Download Video" android:textStyle="bold" android:textSize="28sp" android:textColor="#111111" android:layout_gravity="center_horizontal"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="TikTok, Instagram, Facebook, YouTube, Twitter/X, Threads, Pinterest" android:textSize="14sp" android:textColor="#777777" android:gravity="center" android:layout_marginTop="8dp" android:layout_marginBottom="22dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="54dp" android:orientation="horizontal">
+                    <EditText android:id="@+id/urlInput" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:hint="Kole lyen videyo a isit la..." android:singleLine="true" android:inputType="textUri" android:paddingStart="14dp" android:paddingEnd="14dp" android:background="@android:drawable/editbox_background"/>
+                    <Button android:id="@+id/pasteButton" android:layout_width="58dp" android:layout_height="match_parent" android:text="📋" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <Button android:id="@+id/getButton" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="14dp" android:text="Jwenn Videyo" android:textStyle="bold"/>
+                <ProgressBar android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="16dp" android:visibility="gone"/>
+                <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="13sp" android:textColor="#777777" android:gravity="center" android:layout_marginTop="10dp"/>
+
+                <LinearLayout android:id="@+id/resultPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:layout_marginTop="20dp">
+                    <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:textStyle="bold" android:textSize="17sp" android:textColor="#222222"/>
+                    <TextView android:id="@+id/author" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="13sp" android:textColor="#888888" android:layout_marginTop="4dp"/>
+                    <Button android:id="@+id/videoDownload" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="14dp" android:text="⬇️ Telechaje Videyo San Logo"/>
+                    <Button android:id="@+id/musicDownload" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:text="🎵 Telechaje Mizik Sèlman"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/bannerAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+</LinearLayout>
